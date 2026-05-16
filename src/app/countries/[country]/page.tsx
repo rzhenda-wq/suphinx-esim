@@ -64,6 +64,11 @@ export default function CountryPage({ params }: { params: Params }) {
             </p>
           </div>
         </div>
+        {data.description && (
+          <p className="text-teal-50 text-sm leading-relaxed mb-4 max-w-2xl">
+            {data.description}
+          </p>
+        )}
         <LastUpdatedBadge date={latestDate} size="sm" label="Data verified" />
       </div>
 
@@ -213,7 +218,7 @@ export default function CountryPage({ params }: { params: Params }) {
       {/* Other countries */}
       <div>
         <h2 className="text-xl font-bold text-gray-900 mb-4">Other Destinations</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
           {otherCountries.map(([slug, { label, emoji }]) => (
             <Link
               key={slug}

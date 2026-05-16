@@ -14,9 +14,17 @@ export const metadata: Metadata = {
 const destinations = [
   { slug: "thailand", label: "Thailand", emoji: "🇹🇭", description: "Beaches & temples" },
   { slug: "japan", label: "Japan", emoji: "🇯🇵", description: "Cities & culture" },
+  { slug: "korea", label: "South Korea", emoji: "🇰🇷", description: "World-class 5G" },
+  { slug: "singapore", label: "Singapore", emoji: "🇸🇬", description: "Transit hub" },
+  { slug: "taiwan", label: "Taiwan", emoji: "🇹🇼", description: "Fast 4G island" },
+  { slug: "vietnam", label: "Vietnam", emoji: "🇻🇳", description: "Nomad favourite" },
+  { slug: "indonesia", label: "Indonesia", emoji: "🇮🇩", description: "Island hopping" },
+  { slug: "australia", label: "Australia", emoji: "🇦🇺", description: "East coast & beyond" },
   { slug: "usa", label: "USA", emoji: "🇺🇸", description: "Coast to coast" },
   { slug: "uk", label: "UK", emoji: "🇬🇧", description: "London & beyond" },
   { slug: "france", label: "France", emoji: "🇫🇷", description: "Paris & Riviera" },
+  { slug: "italy", label: "Italy", emoji: "🇮🇹", description: "La dolce vita" },
+  { slug: "spain", label: "Spain", emoji: "🇪🇸", description: "Sun & coast" },
 ];
 
 export default function HomePage() {
@@ -107,7 +115,7 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold text-gray-900">Popular Destinations</h2>
         </div>
         <p className="text-gray-500 mb-8">Click a country to see the best eSIMs for that destination</p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {destinations.map(({ slug, label, emoji, description }) => (
             <Link
               key={slug}

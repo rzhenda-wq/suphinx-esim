@@ -346,33 +346,98 @@ export const providers: Provider[] = [
 
 export const countryData: Record<
   string,
-  { label: string; emoji: string; topProviderIds: string[] }
+  { label: string; emoji: string; description: string; topProviderIds: string[] }
 > = {
   thailand: {
     label: "Thailand",
     emoji: "🇹🇭",
-    // Ordered by suitability × rating: high-rated providers with SEA coverage
+    description:
+      "Thailand's tourist hotspots — Bangkok, Chiang Mai, Phuket — have solid 4G LTE coverage from AIS and DTAC. Island areas can be patchy, so an unlimited plan takes the stress out of island-hopping.",
     topProviderIds: ["holafly", "jetpac", "saily", "nomad", "airalo"],
   },
   japan: {
     label: "Japan",
     emoji: "🇯🇵",
+    description:
+      "Japan has some of the world's fastest mobile networks but physical SIM cards require registration. An eSIM activated before you land is the smoothest option — especially useful on the Shinkansen.",
     topProviderIds: ["holafly", "jetpac", "saily", "nomad", "ubigi"],
   },
   usa: {
     label: "USA",
     emoji: "🇺🇸",
+    description:
+      "The US is large and rural coverage gaps exist. Choosing an eSIM that runs on T-Mobile or AT&T gives the best nationwide reach. 5G is widely available in major cities.",
     topProviderIds: ["saily", "alosim", "jetpac", "nomad", "gigsky"],
   },
   uk: {
     label: "UK",
     emoji: "🇬🇧",
+    description:
+      "UK coverage is excellent in cities but can drop in the Scottish Highlands and rural Wales. EU roaming rights no longer apply post-Brexit, so a dedicated UK eSIM is often cheaper than roaming.",
     topProviderIds: ["simlocal", "holafly", "jetpac", "saily", "nomad"],
   },
   france: {
     label: "France",
     emoji: "🇫🇷",
+    description:
+      "France has strong 4G/5G coverage in Paris and major cities. Rural areas and the Alps can be spotty. An EU-wide eSIM plan lets you roam across France and neighboring countries seamlessly.",
     topProviderIds: ["simlocal", "holafly", "jetpac", "saily", "nomad"],
+  },
+  korea: {
+    label: "South Korea",
+    emoji: "🇰🇷",
+    description:
+      "South Korea has one of the highest 5G penetration rates in the world. Coverage is near-perfect even in subway tunnels and mountainous areas. Speed-hungry travelers will find 5G eSIM plans excellent value here.",
+    topProviderIds: ["jetpac", "saily", "holafly", "nomad", "airalo"],
+  },
+  taiwan: {
+    label: "Taiwan",
+    emoji: "🇹🇼",
+    description:
+      "Taiwan's 4G network is fast and covers most of the island including the east coast and mountain national parks. An eSIM is far more convenient than hunting for a SIM card at Taoyuan Airport.",
+    topProviderIds: ["jetpac", "saily", "holafly", "nomad", "airalo"],
+  },
+  vietnam: {
+    label: "Vietnam",
+    emoji: "🇻🇳",
+    description:
+      "Vietnam is popular for long-stay travelers and digital nomads. Local SIMs require a passport registration process, making eSIM the hassle-free alternative. Data costs are low and coverage is good along the north-south corridor.",
+    topProviderIds: ["holafly", "jetpac", "saily", "nomad", "airalo"],
+  },
+  italy: {
+    label: "Italy",
+    emoji: "🇮🇹",
+    description:
+      "Italy's urban areas are well covered, but Cinque Terre and remote countryside can be weak. An EU-wide eSIM plan covers Italy plus any side trips to neighboring countries at no extra charge.",
+    topProviderIds: ["simlocal", "holafly", "jetpac", "saily", "nomad"],
+  },
+  spain: {
+    label: "Spain",
+    emoji: "🇪🇸",
+    description:
+      "Spain has excellent 4G/5G in cities and popular coasts. The Canary and Balearic Islands are included in most EU eSIM plans. A regional EU eSIM is perfect if you're combining Spain with France or Portugal.",
+    topProviderIds: ["simlocal", "holafly", "jetpac", "saily", "nomad"],
+  },
+  indonesia: {
+    label: "Indonesia",
+    emoji: "🇮🇩",
+    description:
+      "Indonesia's 17,000+ islands mean coverage varies wildly. Bali and Jakarta have strong 4G, but remote islands like Komodo or Raja Ampat are limited. An unlimited plan prevents surprises in low-signal areas.",
+    topProviderIds: ["holafly", "jetpac", "saily", "nomad", "airalo"],
+  },
+  singapore: {
+    label: "Singapore",
+    emoji: "🇸🇬",
+    description:
+      "Singapore has near-perfect 5G coverage across the entire city-state, including the MRT underground. It's a major transit hub — activating an eSIM at Changi Airport before onward connections is a smart move.",
+    topProviderIds: ["jetpac", "saily", "holafly", "nomad", "airalo"],
+  },
+  australia: {
+    label: "Australia",
+    emoji: "🇦🇺",
+    description:
+      "Australia is vast, and coverage outside major cities and highways can be very limited. For road trips in the Outback, no eSIM will help — but for city travel and the east coast, 4G/5G coverage is excellent.",
+    topProviderIds: ["jetpac", "saily", "holafly", "alosim", "nomad"],
   },
 };
 
