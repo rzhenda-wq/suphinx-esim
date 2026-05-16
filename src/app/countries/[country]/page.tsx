@@ -98,14 +98,21 @@ export default function CountryPage({ params }: { params: Params }) {
               }`}
             >
               <div className="flex flex-wrap items-start gap-4 justify-between">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3">
                   {/* Rank badge */}
                   <div
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg shrink-0 ${
-                      i === 0 ? "bg-teal-600 text-white" : "bg-gray-100 text-gray-600"
+                    className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm shrink-0 ${
+                      i === 0 ? "bg-teal-600 text-white" : "bg-gray-100 text-gray-500"
                     }`}
                   >
                     #{i + 1}
+                  </div>
+                  {/* Brand icon */}
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg shrink-0"
+                    style={{ backgroundColor: provider.brandColor, color: provider.brandTextColor }}
+                  >
+                    {provider.name.charAt(0)}
                   </div>
                   <div>
                     <div className="flex items-center gap-2 flex-wrap">

@@ -21,6 +21,8 @@ export const newProvider: Provider = {
   dataType: "fixed",                 // "fixed" | "unlimited" | "both"
   trustpilotRating: 4.0,             // from trustpilot.com/review/<domain>
   trustpilotTrend: "stable",         // "rising" | "stable" | "declining"
+  brandColor: "#000000",             // hex — background for letter avatar icon
+  brandTextColor: "#ffffff",         // "#ffffff" or "#1f2937" depending on contrast
   strengths: [
     "Key strength 1",
     "Key strength 2",

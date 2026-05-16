@@ -116,7 +116,10 @@ export default function QuizWizard() {
             >
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-700 rounded-xl flex items-center justify-center text-white font-bold">
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center font-bold shrink-0"
+                    style={{ backgroundColor: provider.brandColor, color: provider.brandTextColor }}
+                  >
                     {provider.name.charAt(0)}
                   </div>
                   <div>
