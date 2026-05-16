@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Suphinx eSIM Compare
 
-## Getting Started
+Independent comparison of the top 12 travel eSIM providers. Built with Next.js 14 App Router, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Features
+
+- **12 providers compared** — Airalo, Holafly, Saily, Jetpac, Nomad, Ubigi, aloSIM, MobiMatter, FlexiRoam, Maya Mobile, GigSky, Sim Local
+- **Filter & sort** — by country, budget, data type, Trustpilot rating
+- **Trend indicators** — rising/stable/declining per provider
+- **4-step quiz** — personalized eSIM recommendations
+- **Country pages** — Thailand, Japan, USA, UK, France
+- **Monthly update system** — checklist + guide for keeping data fresh
+- **SEO-optimized** — metadata on every page, static generation for country pages
+
+## Quick Start
 
 ```bash
+cd app
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx                     # Home
+│   │   ├── compare/page.tsx             # All providers
+│   │   ├── quiz/page.tsx                # 4-step quiz
+│   │   ├── countries/[country]/page.tsx # Country pages
+│   │   └── layout.tsx
+│   ├── components/
+│   │   ├── ProviderCard.tsx
+│   │   ├── ComparisonTable.tsx
+│   │   ├── QuizWizard.tsx
+│   │   ├── LastUpdatedBadge.tsx
+│   │   ├── TrendIndicator.tsx
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   └── data/
+│       └── providers.ts                 # All provider data lives here
+└── scripts/
+    ├── MONTHLY_UPDATE_GUIDE.md          # Step-by-step update process
+    ├── update-checklist.md              # Monthly tracking sheet
+    └── new-provider-template.ts         # Template for new providers
+```
 
-## Learn More
+## Monthly Update Process
 
-To learn more about Next.js, take a look at the following resources:
+See `scripts/MONTHLY_UPDATE_GUIDE.md` for the full process.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**TL;DR:**
+1. Go through `scripts/update-checklist.md`
+2. Update prices, ratings, and dates in `src/data/providers.ts`
+3. Run `npm run build` to verify no TypeScript errors
+4. Commit and deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Adding a New Provider
 
-## Deploy on Vercel
+1. Copy `scripts/new-provider-template.ts`
+2. Fill in all required fields
+3. Add to the `providers` array in `src/data/providers.ts`
+4. Add to relevant `countryData.topProviderIds` if it ranks top 5
+5. Run `npm run build`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site is designed for [Vercel](https://vercel.com) deployment:
+
+```bash
+npm i -g vercel
+vercel --prod
+```
+
+Country pages are statically generated at build time via `generateStaticParams`.
+
+## Tech Stack
+
+- **Next.js 14** (App Router)
+- **TypeScript** (strict mode)
+- **Tailwind CSS**
+- **Lucide React** icons
+
+## Affiliate Disclosure
+
+Links to eSIM providers may be affiliate links. Suphinx earns a small commission if you purchase through these links, at no extra cost to you. Rankings are based on our independent assessment of pricing, coverage, and user satisfaction.
