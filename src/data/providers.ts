@@ -86,7 +86,7 @@ export const providers: Provider[] = [
     id: "saily",
     name: "Saily",
     officialUrl: "https://saily.com",
-    affiliateUrl: "https://saily.com?ref=suphinx",
+    affiliateUrl: "https://go.saily.site/aff_c?offer_id=101&aff_id=14140",
     description:
       "Privacy-focused eSIM from the NordVPN team. Includes ad blocker and web protection. Offers the most generous unlimited daily cap (5GB/day at full speed) among major providers.",
     logo: "/logos/saily.svg",
