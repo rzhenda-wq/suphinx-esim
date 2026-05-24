@@ -216,7 +216,7 @@ export const providers: Provider[] = [
     id: "mobimatter",
     name: "MobiMatter",
     officialUrl: "https://mobimatter.com",
-    affiliateUrl: "https://mobimatter.com?ref=suphinx",
+    affiliateUrl: "https://mobimatter.com/#suphinxesim",
     description:
       "An eSIM marketplace aggregating plans from 30+ providers in one place. Great for price comparison, though service quality ultimately depends on the underlying provider.",
     logo: "/logos/mobimatter.svg",
