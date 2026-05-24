@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Star, Globe, ExternalLink, DollarSign, ThumbsDown } from "lucide-react";
+import { Star, Globe, DollarSign, ThumbsDown, ArrowRight } from "lucide-react";
 import type { Provider } from "@/data/providers";
 import TrendIndicator from "./TrendIndicator";
 import { VerifiedBadge } from "./LastUpdatedBadge";
@@ -123,17 +123,17 @@ export default function ProviderCard({ provider, highlight = false, rank }: Prop
         )}
 
         {/* Footer */}
-        <div className="flex items-center justify-between pt-1">
-          <VerifiedBadge date={provider.lastVerified} />
+        <div className="pt-1">
           <Link
             href={provider.affiliateUrl}
             target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="inline-flex items-center gap-1.5 bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors"
+            rel="sponsored noopener"
+            className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 mb-3"
           >
             Get eSIM
-            <ExternalLink size={13} />
+            <ArrowRight className="w-4 h-4" />
           </Link>
+          <VerifiedBadge date={provider.lastVerified} />
         </div>
       </div>
     </div>
